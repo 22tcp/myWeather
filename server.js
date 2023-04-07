@@ -19,7 +19,35 @@ app.use(express.static('website'));
 
 app.get('/', (req,res) => {
     res.sendFile( __dirname + '/website/index.html' );
-})
+});
+
+// Get Route EndPoint
+app.get('/getData', (req,res) => {
+    res.send(projectData);
+    res.status(200).json({
+        message: 'data sent'
+    });
+});
+
+//keep the browser console clear
+app.get('/favicon.ico', (req,res) => {
+    res.send('_');
+});
+
+app.post('/storeData', (req,res) => {
+    let newData = req.body;
+    let newElement = { 
+        temperature : newData.temperature,
+        date:         newData.date,
+        usertext:     newData.usertext, 
+    }
+    console.log(JSON.stringify(newElement));
+    projectData.entry = newElement;
+    res.status(201).json({
+        message: 'data received',
+        data: projectData,
+    });
+});
 
 // Setup Server
 const port = 3000;
