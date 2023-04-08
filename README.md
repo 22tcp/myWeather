@@ -1,9 +1,10 @@
 # Weather-Journal App Project
 
 ## to use this:
-## node init
-## node install
-## node server.js
+node init
+node install
+node server.js
+browse to http://localhost:3000
 
 ## Overview
 This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
