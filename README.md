@@ -1,8 +1,8 @@
 # Weather-Journal App Project
 
 ## to use this:
-node init  
-node install  
+npm init  
+npm install  
 node server.js  
 browse to http://localhost:3000
 
