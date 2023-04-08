@@ -24,9 +24,9 @@ app.get('/', (req,res) => {
 // Get Route EndPoint
 app.get('/getData', (req,res) => {
     res.send(projectData);
-    res.status(200).json({
-        message: 'data sent'
-    });
+//    res.status(200).json({
+//        message: 'data sent'
+//    });
 });
 
 //keep the browser console clear
@@ -40,8 +40,9 @@ app.post('/storeData', (req,res) => {
         temperature : newData.temperature,
         date:         newData.date,
         usertext:     newData.usertext, 
+        location:     newData.location,
     }
-    console.log(JSON.stringify(newElement));
+    //console.log(JSON.stringify(newElement));
     projectData.entry = newElement;
     res.status(201).json({
         message: 'data received',

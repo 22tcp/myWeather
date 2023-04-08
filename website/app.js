@@ -48,14 +48,16 @@ const manageData = (e) => {
         temperature: data.main.temp,
         date: newDate,
         usertext: userText,
+        location: data.name,
         })
     )
     await queryWEB('/getData')
     .then ( data => data.json() )
     .then (data => { 
-        document.getElementById('date').innerHTML = data.entry.date;
-        document.getElementById('temp').innerHTML = data.entry.temperature;
-        document.getElementById('content').innerHTML = data.entry.usertext;
+        document.getElementById('date').innerHTML     = data.entry.date;
+        document.getElementById('temp').innerHTML     = data.entry.temperature;
+        document.getElementById('content').innerHTML  = data.entry.usertext;
+        document.getElementById('location').innerHTML = data.entry.location;
     })
     })();
 
