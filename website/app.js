@@ -1,5 +1,5 @@
 /* Global Variables */
-const owmapikey = "&appid=b9f1b31b3c30d0b246109a98fbdcde93";
+const owmapikey = "&appid=expired-get-your-own";
 const owmendpoint = "https://api.openweathermap.org/data/2.5/weather?zip="; 
 
 
